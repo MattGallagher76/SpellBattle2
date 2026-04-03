@@ -2,10 +2,9 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - ActivateDisplays
-    - DoorController
-    - GameController
-    - PlayerController
-    - RoomController
+    - MetaInputManager
+    - Sigil
+    - SigilSection
     Unity.InputSystem.dll:
     - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputActionReference
@@ -30,8 +29,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -85,19 +86,154 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
   - assembly: Assembly-CSharp
-    fullTypeName: PlayerController
-    methodName: directionalButtonPressed
+    fullTypeName: MetaInputManager
+    methodName: eval
   - assembly: Assembly-CSharp
-    fullTypeName: PlayerController
-    methodName: directionalButtonPressed
+    fullTypeName: Sigil
+    methodName: changeMode
   - assembly: Assembly-CSharp
-    fullTypeName: PlayerController
-    methodName: directionalButtonPressed
+    fullTypeName: Sigil
+    methodName: changeMode
   - assembly: Assembly-CSharp
-    fullTypeName: PlayerController
-    methodName: resetScene
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: Sigil
+    methodName: changeMode
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/PasswordScene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -106,80 +242,58 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
     - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
-    - Class: 64
-      Script: {instanceID: 0}
-    - Class: 65
-      Script: {instanceID: 0}
-    - Class: 74
-      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 84
-      Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
-    - Class: 91
-      Script: {instanceID: 0}
-    - Class: 95
+    - Class: 82
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16736}
+      Script: {instanceID: 16682}
     - Class: 114
-      Script: {instanceID: 16766}
+      Script: {instanceID: 16684}
     - Class: 114
-      Script: {instanceID: 17414}
+      Script: {instanceID: 16740}
     - Class: 114
-      Script: {instanceID: 17454}
+      Script: {instanceID: 17464}
     - Class: 114
-      Script: {instanceID: 17616}
+      Script: {instanceID: 18012}
     - Class: 114
-      Script: {instanceID: 18002}
+      Script: {instanceID: 18246}
     - Class: 114
-      Script: {instanceID: 18236}
+      Script: {instanceID: 19376}
     - Class: 114
-      Script: {instanceID: 18602}
+      Script: {instanceID: 19740}
     - Class: 114
-      Script: {instanceID: 18996}
+      Script: {instanceID: 19866}
     - Class: 114
-      Script: {instanceID: 19364}
+      Script: {instanceID: 20174}
     - Class: 114
-      Script: {instanceID: 19726}
+      Script: {instanceID: 21062}
     - Class: 114
-      Script: {instanceID: 19852}
+      Script: {instanceID: 21742}
     - Class: 114
-      Script: {instanceID: 20160}
+      Script: {instanceID: 21942}
     - Class: 114
-      Script: {instanceID: 21048}
+      Script: {instanceID: 22362}
     - Class: 114
-      Script: {instanceID: 21722}
+      Script: {instanceID: 22816}
     - Class: 114
-      Script: {instanceID: 21844}
+      Script: {instanceID: 23688}
     - Class: 114
-      Script: {instanceID: 21922}
+      Script: {instanceID: 24430}
     - Class: 114
-      Script: {instanceID: 22342}
+      Script: {instanceID: 193264}
     - Class: 114
-      Script: {instanceID: 22796}
+      Script: {instanceID: 193268}
     - Class: 114
-      Script: {instanceID: 23664}
-    - Class: 114
-      Script: {instanceID: 24404}
+      Script: {instanceID: 193492}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -205,6 +319,18 @@ ScriptsOnlyBuild:
     className: ContentSizeFitter
   - hash:
       serializedVersion: 2
+      Hash: 915204dac8acad99f076d6e72ada0a0f
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: 1ab136900c0edaeeb49424c852595030
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: RawImage
+  - hash:
+      serializedVersion: 2
       Hash: 55060a7bf226ac385ce19ebd450f199f
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UIElements
@@ -227,6 +353,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: DoorController
+  - hash:
+      serializedVersion: 2
+      Hash: 33126479ed1e3138daa73d93fb40180f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ItemController
   - hash:
       serializedVersion: 2
       Hash: f45600bcc886206dd55a3208474aad61
@@ -289,10 +421,22 @@ ScriptsOnlyBuild:
     className: UnityOnMouseExitMessageListener
   - hash:
       serializedVersion: 2
+      Hash: adce9609af4e2273cf0327c5539b9d19
+    assemblyName: Assembly-CSharp
+    namespaceName: zombisoft
+    className: DoorLever
+  - hash:
+      serializedVersion: 2
       Hash: 11a492830b189fafb9ed2f7afa464c56
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: SimpleScript
+  - hash:
+      serializedVersion: 2
+      Hash: 2b59e77ea21834472c7ee079c35e4e1e
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: FacePlayer
   - hash:
       serializedVersion: 2
       Hash: b12640dfdb5966813e9dd838893e6c4a
@@ -301,7 +445,7 @@ ScriptsOnlyBuild:
     className: UnityOnTriggerEnterMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 5cbb0b768f5d868a7a5a06cd6650a577
+      Hash: a405ddb1fa26f869082d5b9893127df7
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: RoomController
@@ -343,10 +487,10 @@ ScriptsOnlyBuild:
     className: UnityOnJointBreakMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 1ab136900c0edaeeb49424c852595030
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.UI
-    className: RawImage
+      Hash: 288a11be9a04e0cfbb1eb9200a790216
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: BossController
   - hash:
       serializedVersion: 2
       Hash: 1321993db8249e1e05e1e0492b2bbdc3
@@ -427,6 +571,12 @@ ScriptsOnlyBuild:
     className: TMP_SelectionCaret
   - hash:
       serializedVersion: 2
+      Hash: d72e4b35c726afed4c575e17b70ba4e1
+    assemblyName: Assembly-CSharp
+    namespaceName: zombisoft
+    className: DoorAuto
+  - hash:
+      serializedVersion: 2
       Hash: 28fd3d045acc780719a17f02073eb448
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -481,12 +631,6 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: 915204dac8acad99f076d6e72ada0a0f
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.UI
-    className: Button
-  - hash:
-      serializedVersion: 2
       Hash: 593a641cd7822a10b9a54aa9eb5c3d5e
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
@@ -529,6 +673,12 @@ ScriptsOnlyBuild:
     className: InputActionImporterEditor
   - hash:
       serializedVersion: 2
+      Hash: 7a24b11c8cf3b8d45fbeabb2f2822fc0
+    assemblyName: Assembly-CSharp
+    namespaceName: zombisoft
+    className: Fader
+  - hash:
+      serializedVersion: 2
       Hash: c6369b4cc3be620d6c9300e920bc3d52
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -553,7 +703,7 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
-      Hash: a75136aa94a63e535caf1ad4fe0a6f2f
+      Hash: 31e8d1cef58a5f133ddabe5d2cd581ba
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerController
@@ -611,6 +761,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem
     className: InputActionAsset
+  - hash:
+      serializedVersion: 2
+      Hash: d9ad646a5d17299134d54b1bd17b0224
+    assemblyName: Assembly-CSharp
+    namespaceName: zombisoft
+    className: SwipeManager
   - hash:
       serializedVersion: 2
       Hash: 72561d2e822b466169cd12a3b9f9ae0c
@@ -949,6 +1105,12 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
+      Hash: 41096e8cc7f21eb8ef3a1fc43c9071ef
+    assemblyName: Assembly-CSharp
+    namespaceName: zombisoft
+    className: CardinalPoints
+  - hash:
+      serializedVersion: 2
       Hash: 0dd14e314956b0d0d83ffcffe60aa46f
     assemblyName: Assembly-CSharp
     namespaceName: TMPro
@@ -979,6 +1141,12 @@ ScriptsOnlyBuild:
     className: UnityOnDeselectMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 34d05cceadfabad43d6780afd846d707
+    assemblyName: Assembly-CSharp
+    namespaceName: zombisoft
+    className: DungeonCrawlerController
+  - hash:
+      serializedVersion: 2
       Hash: b5007673bbbdb9d12597a1d8201370f5
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -995,6 +1163,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.State
     namespaceName: Unity.VisualScripting
     className: StateGraphAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 1664b57419f76d76426a07511b2ed350
+    assemblyName: Assembly-CSharp
+    namespaceName: zombisoft
+    className: EnemyAI
   - hash:
       serializedVersion: 2
       Hash: 6cf63e9dc888f92a3672d2e4db631c8e
@@ -1183,6 +1357,12 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionExitMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 4a76097fb3a83d88eba164a786901373
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: InventoryManager
+  - hash:
+      serializedVersion: 2
       Hash: d2ecd94550edf1b56aff07b1f4e41c57
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1235,6 +1415,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro
     className: TMP_TextEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: a0be621cf1e6b0e7ad7d9669b69fdc3e
+    assemblyName: Assembly-CSharp
+    namespaceName: zombisoft
+    className: Stairs
   - hash:
       serializedVersion: 2
       Hash: ee34255e3e86289bde9bad5e07b84cbc
@@ -1381,6 +1567,12 @@ ScriptsOnlyBuild:
     className: TeleType
   - hash:
       serializedVersion: 2
+      Hash: d4d41e6ed4308bd07bd067ddacd7a16c
+    assemblyName: Assembly-CSharp
+    namespaceName: zombisoft
+    className: PressurePlate
+  - hash:
+      serializedVersion: 2
       Hash: 9fb1c3ab48b256d508ecddd967f98652
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
@@ -1439,7 +1631,43 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 06117e79d1a78070f43705f9b2b76e36
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: BossDialogueBox
+  - hash:
+      serializedVersion: 2
+      Hash: f16ce3d1c6b9e354a383deccadff3891
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: BossFightDialogueController
+  - hash:
+      serializedVersion: 2
+      Hash: 37657b22cd41b5d1168cf2fd504324b9
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ProceedPromptButtons
+  - hash:
+      serializedVersion: 2
+      Hash: ae003b376e40194e6d447d3b62bffb56
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Sigil
+  - hash:
+      serializedVersion: 2
+      Hash: a6062c49250d9cbf86c021460486d048
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MetaInputManager
+  - hash:
+      serializedVersion: 2
+      Hash: c45b54513591721b709951837000fd8f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SigilSection
   platform: 19
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
+  - Assets/Scenes/PasswordScene.unity
   playerPath: C:/CubeMazePrototype/My project (3).exe

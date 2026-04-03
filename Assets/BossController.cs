@@ -4,17 +4,25 @@ using UnityEngine;
 public class BossController : MonoBehaviour
 {
     [Header("References")]
-    public GameObject visualObject; // The object that will blink (mesh, model, etc.)
+    public GameObject visualObject;
+    public Animator bossFireball;
+    public BossFightDialogueController dialogueController;
+    public InventoryManager inventoryManager;
+    public GameController gameController;
 
     [Header("Blink Settings")]
-    public float blinkDuration = 0.1f; // Time between on/off
-    public int blinkCount = 6;         // Number of blinks
+    public float blinkDuration = 0.1f;
+    public int blinkCount = 6;
 
-    private bool isBlinking = false;
-
+    [Header("Boss Stats")]
+    public int health = 3;
     public bool DEBUG_TakeDamage;
 
-    public int health;
+    [Header("Correct Item IDs")]
+    public int[] requiredItemIDs = new int[4];
+
+    private bool isBlinking = false;
+    private bool endingStarted = false;
 
     private void Update()
     {
@@ -25,17 +33,88 @@ public class BossController : MonoBehaviour
         }
     }
 
-    // Call this when the boss takes damage
     public void TakeDamage(int damage)
     {
-        if (!isBlinking)
-        {
-            StartCoroutine(BlinkRoutine());
-        }
-        health--;
+        if (endingStarted)
+            return;
 
-        // You can expand this with health logic later
+        if (!isBlinking)
+            StartCoroutine(BlinkRoutine());
+
+        health -= damage;
         Debug.Log("Boss took damage: " + damage);
+
+        if (health <= 0)
+        {
+            endingStarted = true;
+
+            if (PlayerHasCorrectTools())
+                StartCoroutine(GoodEndingRoutine());
+            else
+                StartCoroutine(BadEndingRoutine());
+        }
+    }
+
+    private bool PlayerHasCorrectTools()
+    {
+        if (inventoryManager == null || inventoryManager.inventory == null)
+            return false;
+
+        for (int i = 0; i < requiredItemIDs.Length; i++)
+        {
+            bool found = false;
+
+            for (int j = 0; j < inventoryManager.inventory.Length; j++)
+            {
+                if (inventoryManager.inventory[j] != null &&
+                    inventoryManager.inventory[j].itemID == requiredItemIDs[i])
+                {
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found)
+                return false;
+        }
+
+        return true;
+    }
+
+    private IEnumerator GoodEndingRoutine()
+    {
+        if (dialogueController != null)
+            dialogueController.StartGoodEnding();
+
+        yield return new WaitForSeconds(3f);
+
+        Debug.Log("Launch magical fireball at Ollie here");
+
+        yield return new WaitForSeconds(2f);
+
+        if (dialogueController != null)
+            dialogueController.StartEpilogue();
+    }
+
+    private IEnumerator BadEndingRoutine()
+    {
+        if (dialogueController != null)
+            dialogueController.StartBadEnding();
+
+        yield return new WaitForSeconds(3f);
+
+        if (bossFireball != null)
+            bossFireball.SetTrigger("fire");
+
+        yield return new WaitForSeconds(1.5f);
+
+        if (gameController != null)
+        {
+            gameController.isDead = true;
+
+            if (gameController.youDiedScreen != null)
+                gameController.youDiedScreen.SetActive(true);
+        }
     }
 
     private IEnumerator BlinkRoutine()

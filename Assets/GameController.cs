@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     public bool isDead = false;
 
     public GameObject youDiedScreen;
+    public GameObject moveMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -26,18 +27,18 @@ public class GameController : MonoBehaviour
 
     public void checkChoice(int choice)
     {
-        if (correctSequence[currentLevel] == choice)
-        {
-            roomSequence[currentLevel].setAdjacentRoomVisibility(false);
-            Debug.Log("Correct");
-            currentLevel++;
-            roomSequence[currentLevel].setAdjacentRoomVisibility(true);
-        }
-        else
-        {
-            isDead = true;
-            Debug.Log("You have died");
-            youDiedScreen.SetActive(true);
-        }
+        //if (correctSequence[currentLevel] == choice)
+        //{
+        //    roomSequence[currentLevel].setAdjacentRoomVisibility(false);
+        //    Debug.Log("Correct");
+        //    currentLevel++;
+        //    roomSequence[currentLevel].setAdjacentRoomVisibility(true);
+        //}
+        //else
+        //{
+        //    isDead = true;
+        //    Debug.Log("You have died");
+        //    youDiedScreen.SetActive(true);
+        //}
     }
 }
