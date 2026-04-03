@@ -24,7 +24,7 @@ public class RoomController : MonoBehaviour
     public GameObject proceedMenu;
     public GameObject proceedMenuSecondScreen;
     public GameObject moveMenu;
-    public TextMeshProUGUI proceedPromptText;
+    public BossDialogueBox proceedPromptText;
 
     [TextArea(2, 6)]
     public string proceedPromptMessage = "Are you sure you wish to proceed?";
@@ -97,8 +97,7 @@ public class RoomController : MonoBehaviour
         proceedChoiceMade = false;
         proceedApproved = false;
 
-        if (proceedPromptText != null)
-            proceedPromptText.text = proceedPromptMessage;
+        proceedPromptText.ShowDialogue("Are you sure you wish to proceed?");
 
         if (moveMenu != null)
             moveMenu.SetActive(false);

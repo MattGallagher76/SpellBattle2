@@ -12,12 +12,12 @@ public class FacePlayer : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<PlayerController>().gameObject.transform;
-        GetComponent<Image>().color = new Color32(
-            (byte)Random.Range(128, 256),
-            (byte)Random.Range(128, 256),
-            (byte)Random.Range(128, 256),
-            255
-        );
+        //GetComponent<Image>().color = new Color32(
+        //    (byte)Random.Range(128, 256),
+        //    (byte)Random.Range(128, 256),
+        //    (byte)Random.Range(128, 256),
+        //    255
+        //);
     }
 
     // Update is called once per frame

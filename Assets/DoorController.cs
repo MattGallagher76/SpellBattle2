@@ -7,6 +7,6 @@ public class DoorController : MonoBehaviour
 
     public void openDoor()
     {
-        animator.SetTrigger("openDoor");
+        animator.SetTrigger("openDoor");        
     }
 }

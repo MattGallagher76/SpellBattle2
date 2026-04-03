@@ -1,11 +1,13 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossController : MonoBehaviour
 {
     [Header("References")]
     public GameObject visualObject;
     public Animator bossFireball;
+    public Animator hunterFireball;
     public BossFightDialogueController dialogueController;
     public InventoryManager inventoryManager;
     public GameController gameController;
@@ -24,38 +26,9 @@ public class BossController : MonoBehaviour
     private bool isBlinking = false;
     private bool endingStarted = false;
 
-    private void Update()
-    {
-        if (DEBUG_TakeDamage)
-        {
-            DEBUG_TakeDamage = false;
-            TakeDamage(1);
-        }
-    }
+    public PlayerController pc;
 
-    public void TakeDamage(int damage)
-    {
-        if (endingStarted)
-            return;
-
-        if (!isBlinking)
-            StartCoroutine(BlinkRoutine());
-
-        health -= damage;
-        Debug.Log("Boss took damage: " + damage);
-
-        if (health <= 0)
-        {
-            endingStarted = true;
-
-            if (PlayerHasCorrectTools())
-                StartCoroutine(GoodEndingRoutine());
-            else
-                StartCoroutine(BadEndingRoutine());
-        }
-    }
-
-    private bool PlayerHasCorrectTools()
+    public bool PlayerHasCorrectTools()
     {
         if (inventoryManager == null || inventoryManager.inventory == null)
             return false;
@@ -81,32 +54,48 @@ public class BossController : MonoBehaviour
         return true;
     }
 
-    private IEnumerator GoodEndingRoutine()
+    public IEnumerator GoodEndingRoutine()
     {
         if (dialogueController != null)
             dialogueController.StartGoodEnding();
 
         yield return new WaitForSeconds(3f);
+        hunterFireball.gameObject.SetActive(true);
+        hunterFireball.SetTrigger("hunterFire");
 
-        Debug.Log("Launch magical fireball at Ollie here");
+        yield return new WaitForSeconds(1.5f);
+        pc.audS.clip = pc.fireball;
+        pc.audS.Play();
+        yield return new WaitForSeconds(0.5f);
+        hunterFireball.gameObject.SetActive(false);
 
-        yield return new WaitForSeconds(2f);
+        yield return StartCoroutine(BlinkRoutine());
+        visualObject.SetActive(false);
+
+        yield return new WaitForSeconds(0.5f);
+        pc.audS.clip = pc.win;
+        pc.audS.Play();
+        yield return new WaitForSeconds(5f);
 
         if (dialogueController != null)
             dialogueController.StartEpilogue();
     }
 
-    private IEnumerator BadEndingRoutine()
+    public IEnumerator BadEndingRoutine()
     {
         if (dialogueController != null)
             dialogueController.StartBadEnding();
 
-        yield return new WaitForSeconds(3f);
-
+        yield return new WaitForSeconds(7f);
+        bossFireball.gameObject.SetActive(true);
         if (bossFireball != null)
             bossFireball.SetTrigger("fire");
 
         yield return new WaitForSeconds(1.5f);
+        pc.audS.clip = pc.fireball;
+        pc.audS.Play();
+        yield return new WaitForSeconds(0.5f);
+        bossFireball.gameObject.SetActive(false);
 
         if (gameController != null)
         {
@@ -115,6 +104,11 @@ public class BossController : MonoBehaviour
             if (gameController.youDiedScreen != null)
                 gameController.youDiedScreen.SetActive(true);
         }
+        yield return new WaitForSeconds(1f);
+        pc.audS.clip = pc.loose;
+        pc.audS.Play();
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene(0);
     }
 
     private IEnumerator BlinkRoutine()
@@ -141,5 +135,52 @@ public class BossController : MonoBehaviour
         {
             r.enabled = state;
         }
+    }
+
+    public void DEBUG_FillInventoryWithCorrectItems()
+    {
+        if (inventoryManager == null || inventoryManager.inventory == null)
+        {
+            Debug.LogError("InventoryManager not set");
+            return;
+        }
+
+        for (int i = 0; i < requiredItemIDs.Length; i++)
+        {
+            int targetID = requiredItemIDs[i];
+            ItemController foundItem = null;
+
+            // Search ALL items in scene for matching ID
+            ItemController[] allItems = FindObjectsOfType<ItemController>();
+
+            for (int j = 0; j < allItems.Length; j++)
+            {
+                if (allItems[j].itemID == targetID)
+                {
+                    foundItem = allItems[j];
+                    break;
+                }
+            }
+
+            if (foundItem == null)
+            {
+                Debug.LogWarning("Could not find item with ID: " + targetID);
+                continue;
+            }
+
+            // Assign to inventory slot
+            inventoryManager.inventory[i] = foundItem;
+
+            // Move it into inventory UI location
+            foundItem.transform.parent = inventoryManager.inventoryLocations[i];
+            foundItem.transform.localPosition = Vector3.zero;
+            foundItem.transform.localScale = Vector3.one * inventoryManager.itemUIScale;
+
+            // Mark as not in world
+            if (foundItem.fp != null)
+                foundItem.fp.setIsInWorld(false);
+        }
+
+        Debug.Log("Filled inventory with correct items");
     }
 }

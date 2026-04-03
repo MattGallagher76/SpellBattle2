@@ -13,18 +13,6 @@ public class GameController : MonoBehaviour
     public GameObject youDiedScreen;
     public GameObject moveMenu;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void checkChoice(int choice)
     {
         //if (correctSequence[currentLevel] == choice)

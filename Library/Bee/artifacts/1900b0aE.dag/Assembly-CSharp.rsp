@@ -364,6 +364,7 @@
 "Assets/DoorController.cs"
 "Assets/FacePlayer.cs"
 "Assets/GameController.cs"
+"Assets/IdleResetToScene.cs"
 "Assets/InventoryManager.cs"
 "Assets/ItemController.cs"
 "Assets/PasswordScene/MetaInputManager.cs"

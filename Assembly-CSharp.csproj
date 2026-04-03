@@ -116,6 +116,7 @@
     <Compile Include="Assets\Player\PlayerController.cs" />
     <Compile Include="Assets\ZombiSoft\DungeonCrawlerV1.2\Scripts\DoorLever.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
+    <Compile Include="Assets\IdleResetToScene.cs" />
     <Compile Include="Assets\GameController.cs" />
     <Compile Include="Assets\ZombiSoft\DungeonCrawlerV1.2\Scripts\PressurePlate.cs" />
   </ItemGroup>

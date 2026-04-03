@@ -6,15 +6,9 @@ public class ItemController : MonoBehaviour
 {
     public int itemID;
     public FacePlayer fp;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [Header("Scales")]
+    public Vector3 worldScale = Vector3.one;
+    public Vector3 inventoryScale = Vector3.one;
+
 }

@@ -20,36 +20,57 @@ public class PlayerController : MonoBehaviour
     private bool isMoving = false;
 
     GameController gameController;
+    BossController bossController;
+    InventoryManager invManager;
+
+    public AudioClip door; //
+    public AudioClip wind; //
+    public AudioClip walk; //
+    public AudioClip item; //
+    public AudioClip fireball; //
+    public AudioClip win; //
+    public AudioClip loose; //
+
+    public AudioSource audS;
+    IdleResetToScene idleReset;
 
     private void Start()
     {
+        idleReset = FindObjectOfType<IdleResetToScene>();
         Screen.SetResolution(3840, 1080, false);
         gameController = FindObjectOfType<GameController>();
+        bossController = FindObjectOfType<BossController>();
+        invManager = FindObjectOfType<InventoryManager>();
     }
 
-    void Update()
-    {
-        if (isMoving || gameController.isDead)
-            return;
+    //void Update()
+    //{
+    //    if (isMoving || gameController.isDead)
+    //        return;
 
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            StartCoroutine(StartMoveDirection(0));
-        }
-        else if (Input.GetKeyDown(KeyCode.A))
-        {
-            StartCoroutine(StartMoveDirection(3));
-        }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            StartCoroutine(StartMoveDirection(1));
-        }
-    }
+    //    if (Input.GetKeyDown(KeyCode.W))
+    //    {
+    //        StartCoroutine(StartMoveDirection(0));
+    //    }
+    //    else if (Input.GetKeyDown(KeyCode.A))
+    //    {
+    //        StartCoroutine(StartMoveDirection(3));
+    //    }
+    //    else if (Input.GetKeyDown(KeyCode.D))
+    //    {
+    //        StartCoroutine(StartMoveDirection(1));
+    //    }
+    //}
 
     public void directionalButtonPressed(int i)
     {
         if (!isMoving)
+        {
+            if (idleReset != null)
+                idleReset.ResetIdleTimer();
+
             StartCoroutine(StartMoveDirection(i));
+        }
     }
 
     public void spinInPlace(int i)
@@ -78,6 +99,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator StartMoveDirection(int dirIndex)
     {
+        invManager.disregardOffer();
         int doorDirRef = ((dirIndex + currentDirection) % 4 + 4) % 4;
 
         GameObject nextRoomObj = currentRoom.GetNextRoomObject(doorDirRef);
@@ -131,24 +153,37 @@ public class PlayerController : MonoBehaviour
                 yield break;
             }
 
+            if (gameController != null && gameController.moveMenu != null)
+                gameController.moveMenu.SetActive(false);
+
+            audS.clip = door;
+            audS.Play();
             currentRoom.OpenDoor(doorDirRef == 0 ? 'n' : doorDirRef == 1 ? 'e' : doorDirRef == 2 ? 's' : doorDirRef == 3 ? 'w' : 'X');
             yield return new WaitForSeconds(doorWaitDuration);
 
             yield return StartCoroutine(MoveTo(transform.position + transform.forward * tunnelDist * 2.5f, moveDurationMultiplier * tunnelDist * 2.5f));
-            yield return StartCoroutine(RotateTo(transform.rotation * Quaternion.Euler(-10f, 0f, 0f), turnDurationMultiplier*3));
-
-            if (gameController != null && gameController.moveMenu != null)
-                gameController.moveMenu.SetActive(false);
+            yield return StartCoroutine(RotateTo(transform.rotation * Quaternion.Euler(-5f, 0f, 0f), turnDurationMultiplier*3));
 
             isMoving = false;
+
+
+            if (bossController.PlayerHasCorrectTools())
+                StartCoroutine(bossController.GoodEndingRoutine());
+            else
+                StartCoroutine(bossController.BadEndingRoutine());
+
             yield break;
         }
 
+        audS.clip = door;
+        audS.Play();
         currentRoom.OpenDoor(doorDirRef == 0 ? 'n' : doorDirRef == 1 ? 'e' : doorDirRef == 2 ? 's' : doorDirRef == 3 ? 'w' : 'X');
         yield return new WaitForSeconds(doorWaitDuration);
 
         yield return StartCoroutine(MoveTo(transform.position + transform.forward * tunnelDist, moveDurationMultiplier * tunnelDist));
 
+        audS.clip = door;
+        audS.Play();
         nextRoom.OpenDoor(doorDirRef == 0 ? 's' : doorDirRef == 1 ? 'w' : doorDirRef == 2 ? 'n' : doorDirRef == 3 ? 'e' : 'X');
         yield return new WaitForSeconds(doorWaitDuration);
 
@@ -157,6 +192,8 @@ public class PlayerController : MonoBehaviour
         gameController.checkChoice(dirIndex - 1);
         currentRoom = nextRoom;
         isMoving = false;
+        if (currentRoom.storedItem != null)
+            invManager.offerItemChoice();
     }
 
     public IEnumerator IntroMoveToDoor()
@@ -182,6 +219,14 @@ public class PlayerController : MonoBehaviour
             yield break;
         }
 
+        // START WALK SOUND
+        if (audS != null && walk != null)
+        {
+            audS.clip = walk;
+            audS.loop = true;
+            audS.Play();
+        }
+
         while (elapsed < duration)
         {
             float t = elapsed / duration;
@@ -193,6 +238,13 @@ public class PlayerController : MonoBehaviour
         }
 
         transform.position = pos;
+
+        // STOP WALK SOUND
+        if (audS != null && audS.isPlaying)
+        {
+            audS.Stop();
+            audS.loop = false;
+        }
     }
 
     IEnumerator RotateTo(Quaternion targetRot, float duration)

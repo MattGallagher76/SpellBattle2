@@ -45,7 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae1c2bfddc86ca439e4efae29856b97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemID: 0
   fp: {fileID: 7177022084981210850}
+  worldScale: {x: 1, y: 1, z: 1}
+  inventoryScale: {x: 120, y: 120, z: 120}
 --- !u!1 &1738896713908966931
 GameObject:
   m_ObjectHideFlags: 0
