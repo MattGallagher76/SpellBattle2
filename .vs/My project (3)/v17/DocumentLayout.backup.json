@@ -3,23 +3,11 @@
   "WorkspaceRootPath": "C:\\My project (3)\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|C:\\My project (3)\\assets\\scrollingtextbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|solutionrelative:assets\\scrollingtextbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|C:\\My project (3)\\assets\\bossfightdialoguecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|solutionrelative:assets\\bossfightdialoguecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|c:\\my project (3)\\assets\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|solutionrelative:assets\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|C:\\My project (3)\\assets\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|solutionrelative:assets\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|C:\\My project (3)\\assets\\faceplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|solutionrelative:assets\\faceplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|C:\\My project (3)\\assets\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|c:\\my project (3)\\assets\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -27,28 +15,12 @@
       "RelativeMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|solutionrelative:assets\\bosscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|C:\\My project (3)\\assets\\bossfightdialoguecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|solutionrelative:assets\\bossfightdialoguecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|C:\\My project (3)\\assets\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|solutionrelative:assets\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|C:\\My project (3)\\assets\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|solutionrelative:assets\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|C:\\My project (3)\\assets\\doorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|solutionrelative:assets\\doorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|C:\\My project (3)\\assets\\passwordscene\\metainputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|solutionrelative:assets\\passwordscene\\metainputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|C:\\My project (3)\\assets\\activateseconddisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|solutionrelative:assets\\activateseconddisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|C:\\My project (3)\\assets\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|solutionrelative:assets\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,156 +30,72 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\My project (3)\\Assets\\Player\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Player\\PlayerController.cs",
               "ToolTip": "C:\\My project (3)\\Assets\\Player\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Player\\PlayerController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFQAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAcwCMAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T23:22:46.266Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MetaInputManager.cs",
-              "DocumentMoniker": "C:\\My project (3)\\Assets\\PasswordScene\\MetaInputManager.cs",
-              "RelativeDocumentMoniker": "Assets\\PasswordScene\\MetaInputManager.cs",
-              "ToolTip": "C:\\My project (3)\\Assets\\PasswordScene\\MetaInputManager.cs",
-              "RelativeToolTip": "Assets\\PasswordScene\\MetaInputManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T22:57:05.061Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BossFightDialogueController.cs",
-              "DocumentMoniker": "C:\\My project (3)\\Assets\\BossFightDialogueController.cs",
-              "RelativeDocumentMoniker": "Assets\\BossFightDialogueController.cs",
-              "ToolTip": "C:\\My project (3)\\Assets\\BossFightDialogueController.cs",
-              "RelativeToolTip": "Assets\\BossFightDialogueController.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAQwCYAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T19:26:48.677Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ScrollingTextBox.cs",
-              "DocumentMoniker": "C:\\My project (3)\\Assets\\ScrollingTextBox.cs",
-              "RelativeDocumentMoniker": "Assets\\ScrollingTextBox.cs",
-              "ToolTip": "C:\\My project (3)\\Assets\\ScrollingTextBox.cs",
-              "RelativeToolTip": "Assets\\ScrollingTextBox.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAcwBoAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T19:22:30.811Z",
+              "WhenOpened": "2026-04-03T23:35:58.491Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ItemController.cs",
-              "DocumentMoniker": "C:\\My project (3)\\Assets\\ItemController.cs",
-              "RelativeDocumentMoniker": "Assets\\ItemController.cs",
-              "ToolTip": "C:\\My project (3)\\Assets\\ItemController.cs",
-              "RelativeToolTip": "Assets\\ItemController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T23:50:02.122Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FacePlayer.cs",
-              "DocumentMoniker": "C:\\My project (3)\\Assets\\FacePlayer.cs",
-              "RelativeDocumentMoniker": "Assets\\FacePlayer.cs",
-              "ToolTip": "C:\\My project (3)\\Assets\\FacePlayer.cs",
-              "RelativeToolTip": "Assets\\FacePlayer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T23:48:54.912Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "InventoryManager.cs",
-              "DocumentMoniker": "C:\\My project (3)\\Assets\\InventoryManager.cs",
-              "RelativeDocumentMoniker": "Assets\\InventoryManager.cs",
-              "ToolTip": "C:\\My project (3)\\Assets\\InventoryManager.cs",
-              "RelativeToolTip": "Assets\\InventoryManager.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAuwEsAAABhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T21:59:16.869Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "BossController.cs",
               "DocumentMoniker": "C:\\My project (3)\\Assets\\BossController.cs",
               "RelativeDocumentMoniker": "Assets\\BossController.cs",
               "ToolTip": "C:\\My project (3)\\Assets\\BossController.cs",
               "RelativeToolTip": "Assets\\BossController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAEwEYAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAswEIAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T00:47:12.394Z"
+              "WhenOpened": "2026-04-01T00:47:12.394Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ActivateSecondDisplay.cs",
-              "DocumentMoniker": "C:\\My project (3)\\Assets\\ActivateSecondDisplay.cs",
-              "RelativeDocumentMoniker": "Assets\\ActivateSecondDisplay.cs",
-              "ToolTip": "C:\\My project (3)\\Assets\\ActivateSecondDisplay.cs",
-              "RelativeToolTip": "Assets\\ActivateSecondDisplay.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "BossFightDialogueController.cs",
+              "DocumentMoniker": "C:\\My project (3)\\Assets\\BossFightDialogueController.cs",
+              "RelativeDocumentMoniker": "Assets\\BossFightDialogueController.cs",
+              "ToolTip": "C:\\My project (3)\\Assets\\BossFightDialogueController.cs",
+              "RelativeToolTip": "Assets\\BossFightDialogueController.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAuwI8AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T01:00:16.675Z"
+              "WhenOpened": "2026-04-02T19:26:48.677Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DoorController.cs",
-              "DocumentMoniker": "C:\\My project (3)\\Assets\\DoorController.cs",
-              "RelativeDocumentMoniker": "Assets\\DoorController.cs",
-              "ToolTip": "C:\\My project (3)\\Assets\\DoorController.cs",
-              "RelativeToolTip": "Assets\\DoorController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAQAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "MetaInputManager.cs",
+              "DocumentMoniker": "C:\\My project (3)\\Assets\\PasswordScene\\MetaInputManager.cs",
+              "RelativeDocumentMoniker": "Assets\\PasswordScene\\MetaInputManager.cs",
+              "ToolTip": "C:\\My project (3)\\Assets\\PasswordScene\\MetaInputManager.cs",
+              "RelativeToolTip": "Assets\\PasswordScene\\MetaInputManager.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T21:55:04.211Z"
+              "WhenOpened": "2026-04-02T22:57:05.061Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "RoomController.cs",
-              "DocumentMoniker": "C:\\My project (3)\\Assets\\RoomController.cs",
-              "RelativeDocumentMoniker": "Assets\\RoomController.cs",
-              "ToolTip": "C:\\My project (3)\\Assets\\RoomController.cs",
-              "RelativeToolTip": "Assets\\RoomController.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAYwJcAAAAQAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "InventoryManager.cs",
+              "DocumentMoniker": "C:\\My project (3)\\Assets\\InventoryManager.cs",
+              "RelativeDocumentMoniker": "Assets\\InventoryManager.cs",
+              "ToolTip": "C:\\My project (3)\\Assets\\InventoryManager.cs",
+              "RelativeToolTip": "Assets\\InventoryManager.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAswB4AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T21:54:38.012Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GameController.cs",
-              "DocumentMoniker": "C:\\My project (3)\\Assets\\GameController.cs",
-              "RelativeDocumentMoniker": "Assets\\GameController.cs",
-              "ToolTip": "C:\\My project (3)\\Assets\\GameController.cs",
-              "RelativeToolTip": "Assets\\GameController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T21:39:52.246Z"
+              "WhenOpened": "2026-04-01T21:59:16.869Z",
+              "EditorCaption": ""
             }
           ]
         }

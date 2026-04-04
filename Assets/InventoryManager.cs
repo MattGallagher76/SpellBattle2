@@ -28,13 +28,14 @@ public class InventoryManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = false;
         pc = FindObjectOfType<PlayerController>();
     }
 
-    //// Update is called once per frame
+    // Update is called once per frame
     //void Update()
     //{
-    //    if(DEBUG_Inventory)
+    //    if (DEBUG_Inventory)
     //    {
     //        DEBUG_Inventory = false;
     //        FindObjectOfType<BossController>().DEBUG_FillInventoryWithCorrectItems();

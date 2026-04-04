@@ -553,6 +553,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1999761216}
     - target: {fileID: 8736008920807647043, guid: 4fcbcdabff6fa704f96773733afeb58b, type: 3}
+      propertyPath: WestRoom
+      value: 
+      objectReference: {fileID: 1904813952}
+    - target: {fileID: 8736008920807647043, guid: 4fcbcdabff6fa704f96773733afeb58b, type: 3}
       propertyPath: NorthRoom
       value: 
       objectReference: {fileID: 10876312}
@@ -3034,8 +3038,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3485,18 +3489,18 @@ MonoBehaviour:
   openingDelay2: 2
   dimDuration: 1.5
   epilogueScrollSpeed: 20
-  openingLine: "You\u2019ve discovered my secret lair! No matter, you\u2019ll never
-    stop me before the ritual is complete!"
-  proceedLine: Are you sure you wish to proceed?
-  badEndingLine1: Those artifacts have no effect on me! My power grows too strong
-    for your feeble mind to even comprehend!
-  badEndingLine2: "Soon the world\u2019s knowledge will be mine!"
-  goodEndingLine: No! How did you find those, they were so we hidden. It's not like
-    I left them right next to the door!
-  epilogueBody: Your magical journey has come to a close. The missing people are
-    yet to be found, but at least you saved the world. \nWe thank you hunter's for
-    participating in our event this year. Congratulations on making it to the end
-    of the hunt. It has been a hoot!
+  epilogueBody: "The world is at peace once more. While the ripples of Ollie\u2019s
+    magic still linger, and the headmaster Rekam L. Leps must rebuild the school,
+    the threat is no more. You represent a different sort of class that the Virginia
+    Polythaumaturgic Institute and Spell Multiversity has not seen for a very, very
+    long time. The sort of class that is not content to rest on what\u2019s easy
+    and instead keep trying new things, search for hidden secrets in the world, and
+    fight for what\u2019s right. How you managed to actually cast that spell at the
+    end, you\u2019ll never know. \r\n\r\nPerhaps the mundane was always magical.\r\n\r\nCongratulations
+    hunters! You have completed the 2026 VT Hunt. Your achievement is extraordinarily
+    commendable and we invite you to mark your completion time on the website and
+    explore an extra secret we\u2019ve left for you behind this contraption. \r\n\r\nYour
+    keyword is\r\n\r\nMYRRH.\r\n"
   introBossSprite: {fileID: 1961790531}
   pc: {fileID: 2135969957}
   fadeImage: {fileID: 578225794}
@@ -3685,7 +3689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueRoot: {fileID: 1776983666}
   dialogueText: {fileID: 881315284}
-  characterDelay: 0.08
+  characterDelay: 0.07
 --- !u!1001 &1071408844
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4658,7 +4662,7 @@ Transform:
   m_GameObject: {fileID: 1376130663}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.6, y: -1.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5668,6 +5672,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8736008920807647043, guid: 4fcbcdabff6fa704f96773733afeb58b, type: 3}
+      propertyPath: WestRoom
+      value: 
+      objectReference: {fileID: 1911343982}
+    - target: {fileID: 8736008920807647043, guid: 4fcbcdabff6fa704f96773733afeb58b, type: 3}
+      propertyPath: SouthRoom
+      value: 
+      objectReference: {fileID: 1413492234}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7182,8 +7194,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 14.000002}
+  m_SizeDelta: {x: 0, y: 27.999996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1987431868
 MonoBehaviour:
@@ -7205,7 +7217,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: R
+  m_text: RESET
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7214,8 +7226,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4279312964
+  m_fontColor: {r: 0.26666668, g: 0.13333334, b: 0.06666667, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7232,8 +7244,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 103
-  m_fontSizeBase: 103
+  m_fontSize: 43.7
+  m_fontSizeBase: 43.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7697,8 +7709,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -800, y: 400}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchoredPosition: {x: -770, y: 370}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2057023540
 MonoBehaviour:
@@ -7776,8 +7788,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 1674916762, guid: 41e98d6a63d65e44a89be3d46222eb5c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -8171,7 +8183,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  moveDurationMultiplier: 0.05
+  moveDurationMultiplier: 0.1
   turnDurationMultiplier: 1.2
   doorWaitDuration: 1.8
   forwardDistFirst: 8.5
@@ -8186,6 +8198,9 @@ MonoBehaviour:
   fireball: {fileID: 8300000, guid: c0d6356c6d59f6e47bfe61b13de480b3, type: 3}
   win: {fileID: 8300000, guid: f1b18cf4c0262de498b192e6f603c275, type: 3}
   loose: {fileID: 8300000, guid: a8ba00e5b56455446b8e33aef3a17735, type: 3}
+  OllieIntro: {fileID: 8300000, guid: abdc3c65194df5847925b98dd5209245, type: 3}
+  goodEnding: {fileID: 8300000, guid: 283821db0008fdb4dbbb1b5205953d9f, type: 3}
+  badEnding: {fileID: 8300000, guid: 5e133b89b66c8a1409e6c75cb637342f, type: 3}
   audS: {fileID: 2135969960}
 --- !u!4 &2135969958
 Transform:
