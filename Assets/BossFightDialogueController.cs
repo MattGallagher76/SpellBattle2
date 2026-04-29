@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BossFightDialogueController : MonoBehaviour
@@ -27,17 +28,19 @@ public class BossFightDialogueController : MonoBehaviour
 
     [Header("Story Text")]
     [TextArea(3, 8)]
-    public string openingLine = "You’ve discovered my secret lair! No matter, you’ll never stop me before the ritual is complete!";
+    string openingLine = "So you’ve come to make a futile attempt to stop me anyways? It’s not like you actually understand the language of wizards. Flail around my secret lair if you wish, the ritual is almost complete!";
 
     [TextArea(2, 6)]
-    public string proceedLine = "Are you sure you wish to proceed?";
+    string proceedLine = "Are you sure you wish to proceed?";
 
     [TextArea(3, 8)]
-    public string badEndingLine1 = "Those artifacts have no effect on me! My power grows too strong for your feeble mind to even comprehend!";
-    public string badEndingLine2= "Soon the world’s knowledge will be mine!";
+    string badEndingLine1 = "Those artifacts are useless on me! I was right! I always knew you were faking it! My power grows too strong for your feeble mind to even comprehend!";
+    string badEndingLine2= "Soon the world’s knowledge will be mine!";
 
     [TextArea(3, 8)]
-    public string goodEndingLine = "TODO";
+    string goodEndingLine1 = "No…       It’s not possible!          I did everything right!          I took out everyone who could possibly stop me!";
+    string goodEndingLine2 = "That wretched headmaster was going to helplessly watch as I became all powerful.                  And you…                YOU!                   You were no one!";
+    string goodEndingLine3 = "You don’t even have any magical power!!      YOU CAN’T DO THIS TO ME!!!";
 
     [TextArea(6, 20)]
     public string epilogueBody = "TODO";
@@ -80,11 +83,14 @@ public class BossFightDialogueController : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         Debug.Log("Play Single Dialouge");
-        yield return StartCoroutine(PlaySingleDialogue(openingLine, lineStayTime, true));
+        pc.audS.clip = pc.OllieIntro;
+        pc.audS.Play();
+        yield return StartCoroutine(PlaySingleDialogue(openingLine, lineStayTime, true, false));
 
+        pc.audS.Stop();
         pc.audS.clip = pc.wind;
         pc.audS.Play();
-        yield return StartCoroutine(DimLightsRoutine(fadeImage, dimDuration));
+        yield return StartCoroutine(DimLightsRoutine(fadeImage, dimDuration, false));
 
         yield return new WaitForSeconds(openingDelay2);
 
@@ -127,14 +133,20 @@ public class BossFightDialogueController : MonoBehaviour
 
     private IEnumerator BadEndingRoutine()
     {
-        yield return StartCoroutine(PlaySingleDialogue(badEndingLine1, 2f, false));
-        yield return new WaitForSeconds(2f);
-        yield return StartCoroutine(PlaySingleDialogue(badEndingLine2, 2f, true));
+        pc.audS.clip = pc.badEnding;
+        pc.audS.Play();
+        yield return StartCoroutine(PlaySingleDialogue(badEndingLine1, 0f, false, false));
+        yield return StartCoroutine(PlaySingleDialogue(badEndingLine2, 2f, true, false));
     }
 
     private IEnumerator GoodEndingRoutine()
     {
-        yield return StartCoroutine(PlaySingleDialogue(goodEndingLine, 2f, true));
+        pc.audS.clip = pc.goodEnding;
+        pc.audS.Play();
+        yield return StartCoroutine(PlaySingleDialogue(goodEndingLine1, 1f, false, true));
+        yield return StartCoroutine(PlaySingleDialogue(goodEndingLine2, 2f, false, true));
+        yield return StartCoroutine(PlaySingleDialogue(goodEndingLine3, 2f, true, true));
+        //yield return new WaitForSeconds(2f);
     }
 
     public void StartEpilogue()
@@ -150,26 +162,24 @@ public class BossFightDialogueController : MonoBehaviour
         if (epilogueRoot == null || epilogueText == null)
             yield break;
 
-        yield return StartCoroutine(DimLightsRoutine(brighteningImage, dimDuration * 2));
-
-        epilogueRoot.SetActive(true);
-        epilogueText.text = epilogueBody;
-
-        RectTransform textRect = epilogueText.GetComponent<RectTransform>();
-        Vector2 startPos = textRect.anchoredPosition;
-        textRect.anchoredPosition = new Vector2(startPos.x, -600f);
+        yield return StartCoroutine(DimLightsRoutine(brighteningImage, dimDuration * 2, true));
 
         yield return null;
 
-        while (textRect.anchoredPosition.y < 1200f)
+        RectTransform textRect = epilogueText.GetComponent<RectTransform>();
+
+        while (textRect.anchoredPosition.y < 500f)
         {
-            textRect.anchoredPosition += Vector2.up * epilogueScrollSpeed * Time.deltaTime;
+            textRect.anchoredPosition += Vector2.up * epilogueScrollSpeed * 1.2f * Time.deltaTime;
             yield return null;
         }
+        SceneManager.LoadScene(0);
     }
 
-    private IEnumerator PlaySingleDialogue(string line, float stayTime, bool HideBoxAfter)
+    private IEnumerator PlaySingleDialogue(string line, float stayTime, bool HideBoxAfter, bool isGood)
     {
+        if (isGood)
+            dialogueBox.characterDelay /= 1.1f;
         Debug.Log("Show Dialouge");
         dialogueBox.ShowDialogue(line);
 
@@ -180,7 +190,7 @@ public class BossFightDialogueController : MonoBehaviour
             dialogueBox.HideDialogue();
     }
 
-    private IEnumerator DimLightsRoutine(RawImage img, float dur)
+    private IEnumerator DimLightsRoutine(RawImage img, float dur, bool startEpiFlag)
     {
         img.gameObject.SetActive(true);
         if (img == null)
@@ -206,6 +216,16 @@ public class BossFightDialogueController : MonoBehaviour
         img.color = c;
 
         yield return new WaitForSeconds(0.5f);
+
+        if(startEpiFlag)
+        {
+            epilogueRoot.SetActive(true);
+            epilogueText.text = epilogueBody;
+
+            RectTransform textRect = epilogueText.GetComponent<RectTransform>();
+            Vector2 startPos = textRect.anchoredPosition;
+            textRect.anchoredPosition = new Vector2(startPos.x, -600f);
+        }
 
         // Hide intro boss while screen is black
         introBossSprite.SetActive(false);

@@ -31,6 +31,10 @@ public class PlayerController : MonoBehaviour
     public AudioClip win; //
     public AudioClip loose; //
 
+    public AudioClip OllieIntro;
+    public AudioClip goodEnding;
+    public AudioClip badEnding;
+
     public AudioSource audS;
     IdleResetToScene idleReset;
 

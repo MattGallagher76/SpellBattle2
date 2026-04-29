@@ -59,7 +59,7 @@ public class BossController : MonoBehaviour
         if (dialogueController != null)
             dialogueController.StartGoodEnding();
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(27f);
         hunterFireball.gameObject.SetActive(true);
         hunterFireball.SetTrigger("hunterFire");
 
@@ -86,7 +86,7 @@ public class BossController : MonoBehaviour
         if (dialogueController != null)
             dialogueController.StartBadEnding();
 
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(18f);
         bossFireball.gameObject.SetActive(true);
         if (bossFireball != null)
             bossFireball.SetTrigger("fire");

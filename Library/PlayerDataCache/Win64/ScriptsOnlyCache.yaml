@@ -2,7 +2,18 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - ActivateDisplays
+    - BossController
+    - BossDialogueBox
+    - BossFightDialogueController
+    - DoorController
+    - FacePlayer
+    - GameController
+    - IdleResetToScene
+    - InventoryManager
+    - ItemController
     - MetaInputManager
+    - PlayerController
+    - RoomController
     - Sigil
     - SigilSection
     Unity.InputSystem.dll:
@@ -29,10 +40,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -232,6 +241,54 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: Sigil
     methodName: changeMode
+  - assembly: Assembly-CSharp
+    fullTypeName: PlayerController
+    methodName: spinInPlace
+  - assembly: Assembly-CSharp
+    fullTypeName: InventoryManager
+    methodName: addItemToInventory
+  - assembly: Assembly-CSharp
+    fullTypeName: PlayerController
+    methodName: directionalButtonPressed
+  - assembly: Assembly-CSharp
+    fullTypeName: PlayerController
+    methodName: directionalButtonPressed
+  - assembly: Assembly-CSharp
+    fullTypeName: RoomController
+    methodName: confirmProceed
+  - assembly: Assembly-CSharp
+    fullTypeName: InventoryManager
+    methodName: addItemToInventory
+  - assembly: Assembly-CSharp
+    fullTypeName: InventoryManager
+    methodName: addItemToInventory
+  - assembly: Assembly-CSharp
+    fullTypeName: RoomController
+    methodName: cancelProceed
+  - assembly: Assembly-CSharp
+    fullTypeName: InventoryManager
+    methodName: addItemToInventory
+  - assembly: Assembly-CSharp
+    fullTypeName: PlayerController
+    methodName: spinInPlace
+  - assembly: Assembly-CSharp
+    fullTypeName: PlayerController
+    methodName: directionalButtonPressed
+  - assembly: Assembly-CSharp
+    fullTypeName: InventoryManager
+    methodName: addItemToInventory
+  - assembly: Assembly-CSharp
+    fullTypeName: InventoryManager
+    methodName: addItemToInventory
+  - assembly: Assembly-CSharp
+    fullTypeName: InventoryManager
+    methodName: addItemToInventory
+  - assembly: Assembly-CSharp
+    fullTypeName: PlayerController
+    methodName: resetScene
+  - assembly: Assembly-CSharp
+    fullTypeName: InventoryManager
+    methodName: addItemToInventory
   sceneClasses:
     Assets/Scenes/PasswordScene.unity:
     - Class: 1
@@ -252,6 +309,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 82
       Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
@@ -259,41 +318,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16684}
     - Class: 114
-      Script: {instanceID: 16740}
+      Script: {instanceID: 16686}
     - Class: 114
-      Script: {instanceID: 17464}
+      Script: {instanceID: 16742}
     - Class: 114
-      Script: {instanceID: 18012}
+      Script: {instanceID: 17250}
     - Class: 114
-      Script: {instanceID: 18246}
+      Script: {instanceID: 17468}
     - Class: 114
-      Script: {instanceID: 19376}
+      Script: {instanceID: 18016}
     - Class: 114
-      Script: {instanceID: 19740}
+      Script: {instanceID: 18250}
     - Class: 114
-      Script: {instanceID: 19866}
+      Script: {instanceID: 19380}
     - Class: 114
-      Script: {instanceID: 20174}
+      Script: {instanceID: 19744}
     - Class: 114
-      Script: {instanceID: 21062}
+      Script: {instanceID: 19870}
     - Class: 114
-      Script: {instanceID: 21742}
+      Script: {instanceID: 20178}
     - Class: 114
-      Script: {instanceID: 21942}
+      Script: {instanceID: 21066}
     - Class: 114
-      Script: {instanceID: 22362}
+      Script: {instanceID: 21950}
     - Class: 114
-      Script: {instanceID: 22816}
+      Script: {instanceID: 22370}
     - Class: 114
-      Script: {instanceID: 23688}
+      Script: {instanceID: 22826}
     - Class: 114
-      Script: {instanceID: 24430}
+      Script: {instanceID: 23386}
     - Class: 114
-      Script: {instanceID: 193264}
+      Script: {instanceID: 23602}
     - Class: 114
-      Script: {instanceID: 193268}
+      Script: {instanceID: 23702}
     - Class: 114
-      Script: {instanceID: 193492}
+      Script: {instanceID: 24444}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -301,6 +360,111 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/SampleScene.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 16682}
+    - Class: 114
+      Script: {instanceID: 16684}
+    - Class: 114
+      Script: {instanceID: 16686}
+    - Class: 114
+      Script: {instanceID: 16742}
+    - Class: 114
+      Script: {instanceID: 16772}
+    - Class: 114
+      Script: {instanceID: 16794}
+    - Class: 114
+      Script: {instanceID: 17290}
+    - Class: 114
+      Script: {instanceID: 17428}
+    - Class: 114
+      Script: {instanceID: 17576}
+    - Class: 114
+      Script: {instanceID: 18016}
+    - Class: 114
+      Script: {instanceID: 18250}
+    - Class: 114
+      Script: {instanceID: 19012}
+    - Class: 114
+      Script: {instanceID: 19380}
+    - Class: 114
+      Script: {instanceID: 21066}
+    - Class: 114
+      Script: {instanceID: 21134}
+    - Class: 114
+      Script: {instanceID: 21796}
+    - Class: 114
+      Script: {instanceID: 21872}
+    - Class: 114
+      Script: {instanceID: 21950}
+    - Class: 114
+      Script: {instanceID: 22370}
+    - Class: 114
+      Script: {instanceID: 22540}
+    - Class: 114
+      Script: {instanceID: 22826}
+    - Class: 114
+      Script: {instanceID: 23002}
+    - Class: 114
+      Script: {instanceID: 23702}
+    - Class: 114
+      Script: {instanceID: 24444}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -331,6 +495,12 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
+      Hash: 540882762544409cc4530e60db00e951
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: CanvasScaler
+  - hash:
+      serializedVersion: 2
       Hash: 55060a7bf226ac385ce19ebd450f199f
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UIElements
@@ -355,7 +525,7 @@ ScriptsOnlyBuild:
     className: DoorController
   - hash:
       serializedVersion: 2
-      Hash: 33126479ed1e3138daa73d93fb40180f
+      Hash: 842a61bfb581361fbff0756ac1d72872
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ItemController
@@ -433,6 +603,12 @@ ScriptsOnlyBuild:
     className: SimpleScript
   - hash:
       serializedVersion: 2
+      Hash: c45b54513591721b709951837000fd8f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SigilSection
+  - hash:
+      serializedVersion: 2
       Hash: 2b59e77ea21834472c7ee079c35e4e1e
     assemblyName: Assembly-CSharp
     namespaceName: 
@@ -445,7 +621,7 @@ ScriptsOnlyBuild:
     className: UnityOnTriggerEnterMessageListener
   - hash:
       serializedVersion: 2
-      Hash: a405ddb1fa26f869082d5b9893127df7
+      Hash: d4ef9b0e40447a3a8437b2be38be29d9
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: RoomController
@@ -487,7 +663,7 @@ ScriptsOnlyBuild:
     className: UnityOnJointBreakMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 288a11be9a04e0cfbb1eb9200a790216
+      Hash: 2783da0ec87f67bea2473bd3096df7a3
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: BossController
@@ -703,7 +879,7 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
-      Hash: 31e8d1cef58a5f133ddabe5d2cd581ba
+      Hash: 367885b91191bb5dc726d989aa712ff8
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerController
@@ -1105,10 +1281,22 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
+      Hash: 06117e79d1a78070f43705f9b2b76e36
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: BossDialogueBox
+  - hash:
+      serializedVersion: 2
       Hash: 41096e8cc7f21eb8ef3a1fc43c9071ef
     assemblyName: Assembly-CSharp
     namespaceName: zombisoft
     className: CardinalPoints
+  - hash:
+      serializedVersion: 2
+      Hash: 37657b22cd41b5d1168cf2fd504324b9
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ProceedPromptButtons
   - hash:
       serializedVersion: 2
       Hash: 0dd14e314956b0d0d83ffcffe60aa46f
@@ -1183,16 +1371,16 @@ ScriptsOnlyBuild:
     className: Benchmark02
   - hash:
       serializedVersion: 2
-      Hash: 540882762544409cc4530e60db00e951
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.UI
-    className: CanvasScaler
-  - hash:
-      serializedVersion: 2
       Hash: 4166580c620718548959a77fa7b43fc1
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: TextMeshSpawner
+  - hash:
+      serializedVersion: 2
+      Hash: e1764ee64384eb7d307d583a3661216a
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: IdleResetToScene
   - hash:
       serializedVersion: 2
       Hash: ef38c1407dba8c1f5d69f5db61a694fe
@@ -1201,7 +1389,7 @@ ScriptsOnlyBuild:
     className: AnimatorMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 9239783a9de54ca9ef208778eea5fe39
+      Hash: 88e5d4a939c129bf9213526bfa4bccb0
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GameController
@@ -1285,6 +1473,12 @@ ScriptsOnlyBuild:
     className: PlayerInputEditor
   - hash:
       serializedVersion: 2
+      Hash: 1d65462269dea23e1d6d2bb4c1f1f1c2
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: BossFightDialogueController
+  - hash:
+      serializedVersion: 2
       Hash: a92561298b80715aa69e8fa770123cb5
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem.UI.Editor
@@ -1357,7 +1551,7 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionExitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 4a76097fb3a83d88eba164a786901373
+      Hash: f0ad80113fcfe281e417e686243c10dd
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: InventoryManager
@@ -1459,6 +1653,12 @@ ScriptsOnlyBuild:
     className: Dropdown
   - hash:
       serializedVersion: 2
+      Hash: ae003b376e40194e6d447d3b62bffb56
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Sigil
+  - hash:
+      serializedVersion: 2
       Hash: e2734bcc7b3e94776ade5d59f54fec1e
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
@@ -1475,6 +1675,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMoveMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 1f512b895b33981f8585301f5e3b4224
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MetaInputManager
   - hash:
       serializedVersion: 2
       Hash: d0392b7f3f52d5af537ade186b4f51f1
@@ -1631,43 +1837,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 06117e79d1a78070f43705f9b2b76e36
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: BossDialogueBox
-  - hash:
-      serializedVersion: 2
-      Hash: f16ce3d1c6b9e354a383deccadff3891
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: BossFightDialogueController
-  - hash:
-      serializedVersion: 2
-      Hash: 37657b22cd41b5d1168cf2fd504324b9
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ProceedPromptButtons
-  - hash:
-      serializedVersion: 2
-      Hash: ae003b376e40194e6d447d3b62bffb56
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Sigil
-  - hash:
-      serializedVersion: 2
-      Hash: a6062c49250d9cbf86c021460486d048
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: MetaInputManager
-  - hash:
-      serializedVersion: 2
-      Hash: c45b54513591721b709951837000fd8f
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: SigilSection
   platform: 19
   scenePathNames:
   - Assets/Scenes/PasswordScene.unity
+  - Assets/Scenes/SampleScene.unity
   playerPath: C:/CubeMazePrototype/My project (3).exe
